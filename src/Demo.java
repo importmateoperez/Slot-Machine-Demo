@@ -151,7 +151,7 @@ public class Demo {
 			
 			//If they still have a balance and do not want add, game continues
 			//If user does not want to enter more money and has none left, game ends
-			if (userMoney == 0)
+			if (userMoney == 0 && addFunds.equals("n"))
 			{
 				break;
 				
@@ -170,8 +170,8 @@ public class Demo {
 			System.out.println("How much would you like to add?");
 			MoreFunds = more.nextInt();
 			
-			//Input validation
-			while (MoreFunds > 0)
+			//Input validation loop
+			while (MoreFunds <= 0)
 			{
 				
 				System.out.println();
